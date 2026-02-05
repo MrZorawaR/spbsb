@@ -1,0 +1,41 @@
+# =========================
+# Node / Tailwind
+# =========================
+node_modules/
+npm-debug.log*
+yarn-error.log*
+
+# =========================
+# Tailwind source file
+# =========================
+assets/css/input.css
+
+# =========================
+# Environment / secrets
+# =========================
+.env
+.env.*
+
+# =========================
+# PHP local config / logs
+# =========================
+php.ini
+php_error.log
+
+# =========================
+# OS junk
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# VS Code (keep extensions if needed)
+# =========================
+.vscode/
+!.vscode/extensions.json
+
+# =========================
+# Temporary / cache
+# =========================
+.cache/
+.tmp/
