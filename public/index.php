@@ -1,16 +1,18 @@
 <?php
+$config = require_once __DIR__ . '/../app/config/site.php';
 
-$title = "SPBSB Institute - Top PGDM Colleges in Greater Noida | B-School";
+$title = "SPBSB Institute - Top PGDM Colleges in Panipat";
 $description = "SPBSB Institute of Management offers AICTE approved PGDM programs with 24 LPA highest package, world-class faculty, and 95%+ placement rate. Apply now for 2026-28 batch.";
 $canonical = "https://spbsb.in/";
 $preload_hero = true;
 
-include __DIR__ . '/../app/includes/header.php';
+require INCLUDES_PATH . '/header.php';
 ?>
 
 <main>
     <!-- Hero Section with Carousel -->
-    <section id="hero" class="relative h-[50vh] md:h-[75vh] lg:h-[85vh] overflow-hidden bg-black animate-fade motion-reduce:animate-none"
+    <section id="hero"
+        class="relative h-[50vh] md:h-[75vh] lg:h-[85vh] overflow-hidden bg-black animate-fade motion-reduce:animate-none"
         aria-label="Featured highlights">
         <div id="hero-slides" class="relative h-full w-full">
 
@@ -27,8 +29,7 @@ include __DIR__ . '/../app/includes/header.php';
                     <div class="absolute inset-0 bg-black/60 md:bg-black/40"></div>
 
                     <!-- MOBILE CONTENT -->
-                    <div class="relative z-20 h-full flex flex-col items-center justify-center
-                 px-6 text-center md:hidden">
+                    <div class="relative z-20 h-full flex flex-col items-center justify-center px-6 text-center md:hidden">
                         <?php if (!empty($slide['logo'])): ?>
                             <img src="<?php echo htmlspecialchars($slide['logo']); ?>" alt="Organization Logo"
                                 class="h-10 mb-4 object-contain" />
@@ -41,21 +42,19 @@ include __DIR__ . '/../app/includes/header.php';
                         <span class="text-lg font-semibold text-yellow-400 mb-5">
                             <?php echo htmlspecialchars($slide['category']); ?>
                         </span>
+                        <?php if (!empty($slide['link'])): ?>
+                            <a href="<?php echo htmlspecialchars($slide['link'], ENT_QUOTES, 'UTF-8'); ?>"
+                                class="inline-block px-7 py-3 bg-secondary-500 text-white text-sm font-medium tracking-wide"
+                                aria-label="Read more about <?php echo htmlspecialchars($slide['title'], ENT_QUOTES, 'UTF-8'); ?>">
+                                Read More
+                            </a>
+                        <?php endif; ?>
 
-                        <a href="<?php echo htmlspecialchars($slide['link']); ?>" class="inline-block px-7 py-3 bg-[#EF5D28] text-white
-                   text-sm font-medium tracking-wide"
-                            aria-label="Read more about <?php echo htmlspecialchars($slide['title']); ?>">
-                            Read More
-                        </a>
                     </div>
 
                     <!-- DESKTOP CONTENT -->
-                    <div class="hidden md:flex absolute inset-y-0 left-0
-                 w-[45%] lg:w-[38%]
-                 px-12 lg:px-16 xl:px-24
-                 items-center z-30">
-                        <div class="absolute inset-0
-                   bg-gradient-to-r from-black/70 via-black/40 to-transparent"></div>
+                    <div class="hidden md:flex absolute inset-y-0 left-0 w-[45%] px-12 lg:px-16 xl:px-24 items-center z-30">
+                        <div class="absolute inset-0 bg-gradient-to-r from-black/40 via-black/20 to-transparent"></div>
 
                         <div class="relative max-w-lg text-white">
                             <?php if (!empty($slide['logo'])): ?>
@@ -70,50 +69,21 @@ include __DIR__ . '/../app/includes/header.php';
                             <span class="text-2xl font-bold text-yellow-400 block mb-8">
                                 <?php echo htmlspecialchars($slide['category']); ?>
                             </span>
-
-                            <a href="<?php echo htmlspecialchars($slide['link']); ?>" class="inline-block px-8 py-3 bg-[#EF5D28]
-                     hover:bg-[#d64d1c]
-                     text-white text-sm font-medium">
-                                Read More
-                            </a>
+                            <?php if (!empty($slide['link'])): ?>
+                                <a href="<?php echo htmlspecialchars($slide['link']); ?>" class="inline-block px-8 py-3 bg-secondary-500 hover:bg-secondary-600 text-white text-sm font-medium">
+                                    Read More
+                                </a>
+                            <?php endif; ?>
                         </div>
                     </div>
 
                     <!-- CONTROLS (MOBILE + DESKTOP RESPONSIVE) -->
-                    <div class="
-            absolute z-40
-            inset-y-1/2 -translate-y-1/2
-            left-0 right-0
-            flex justify-between
-            px-4
-
-            md:inset-auto md:translate-y-0
-            md:bottom-20 md:left-[6.5%] md:right-auto
-            md:px-0 md:justify-start md:gap-4
-          ">
-                        <button id="hero-prev" aria-label="Previous slide" class="
-              w-10 h-10
-              flex items-center justify-center
-              text-white
-              transition
-
-              md:rounded-full
-              md:border md:border-white
-              md:hover:bg-white md:hover:text-black
-            ">
+                    <div class="absolute z-40 inset-y-1/2 -translate-y-1/2 left-0 right-0 flex justify-between px-4 md:inset-auto md:translate-y-0 md:bottom-20 md:left-[6.5%] md:right-auto md:px-0 md:justify-start md:gap-4">
+                        <button id="hero-prev" aria-label="Previous slide" class=" w-10 h-10 flex items-center justify-center text-white transition md:rounded-full md:border md:border-white md:hover:bg-white md:hover:text-black">
                             ‹
                         </button>
 
-                        <button id="hero-next" aria-label="Next slide" class="
-              w-10 h-10
-              flex items-center justify-center
-              text-white
-              transition
-
-              md:rounded-full
-              md:border md:border-white
-              md:hover:bg-white md:hover:text-black
-            ">
+                        <button id="hero-next" aria-label="Next slide" class=" w-10 h-10 flex items-center justify-center text-white transition md:rounded-full md:border md:border-white md:hover:bg-white md:hover:text-black ">
                             ›
                         </button>
                     </div>
@@ -271,9 +241,20 @@ include __DIR__ . '/../app/includes/header.php';
     </section>
 
     <!-- The Ranking Banner -->
-    <section class="w-full">
-        <img src="https://geetauniversity.edu.in/uploads/all/1905/the.webp" alt="The Ranking"
-            class="w-full h-auto block">
+    <section class="bg-[#F9EBDB] py-0 md:py-6 px-0 md:px-8">
+        <div class="max-w-7xl mx-auto">
+
+            <!-- Desktop Image -->
+            <img src="https://geetauniversity.edu.in/uploads/all/1905/the.webp"
+                alt="Times Higher Education World University Rankings" width="1920" height="420" loading="lazy"
+                class="hidden md:block w-full h-auto rounded-lg" />
+
+            <!-- Mobile Image -->
+            <img src="https://geetauniversity.edu.in/uploads/all/1890/THE-Ranking.jpg"
+                alt="Times Higher Education World University Rankings" width="768" height="480" loading="lazy"
+                class="block md:hidden w-full h-auto rounded-lg" />
+
+        </div>
     </section>
 
     <!-- LOP Section -->
@@ -433,7 +414,7 @@ include __DIR__ . '/../app/includes/header.php';
 
             <div class="md:col-span-5 hidden md:block">
                 <div class="relative rounded-lg overflow-hidden shadow-lg border border-gray-200">
-                    <img src="https://images.unsplash.com/photo-1526779259212-939e64788e3c?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZnJlZSUyMGltYWdlc3xlbnwwfHwwfHx8MA%3D%3D"
+                    <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAweqaQW6o7WvsvOanh_RcSmtZy9uqgb83KTroVGs6ogkMQHz9GKHr4scSn-yN2YwiXRmC-E_4S0TvHSUlGP194dR1jODI_IdKICcYb9mDMOk8TL2NLzGNikG7OW_--Q05OTcCtV3jpA=w408-h409-k-no"
                         alt="Geeta Group Ecosystem" class="w-full h-full object-cover aspect-[1/1]" loading="lazy" />
                 </div>
             </div>
@@ -442,4 +423,4 @@ include __DIR__ . '/../app/includes/header.php';
     </section>
 </main>
 
-<?php include __DIR__ . '/../app/includes/footer.php'; ?>
+<?php require INCLUDES_PATH . '/footer.php'; ?>

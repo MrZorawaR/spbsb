@@ -3,117 +3,113 @@
  * Site Configuration - SPBSB Institute
  * All site-wide settings and constants
  */
+defined('BASE_PATH') || define('BASE_PATH', dirname(__DIR__, 2));
+defined('APP_PATH') || define('APP_PATH', BASE_PATH . '/app');
+defined('INCLUDES_PATH') || define('INCLUDES_PATH', APP_PATH . '/includes');
+defined('PUBLIC_PATH') || define('PUBLIC_PATH', BASE_PATH . '/public');
 
 return [
     // Site Identity
-    'site_name'     => 'SPBSB Institute of Management',
-    'site_tagline'  => 'Excellence in Management Education',
-    'site_short'    => 'SPBSB',
-    
+    'site_name' => 'SPBSB Institute of Management',
+    'site_tagline' => 'Excellence in Management Education',
+    'site_short' => 'SPBSB',
+
     // Environment
-    'base_url'      => '', // Empty for relative paths
-    'env'           => 'local', // local | production
-    
+    'base_url' => '', // Empty for relative paths
+    'env' => 'local', // local | production
+
     // Contact Information
     'contact' => [
-        'phone'     => '+91-120-6843000',
+        'phone' => '+91-120-6843000',
         'toll_free' => '1800 5723 999',
-        'email'     => 'admissions@spbsb.in',
-        'address'   => 'Plot No. 5, Knowledge Park II, Greater Noida, UP 201306',
+        'email' => 'admissions@spbsb.in',
+        'address' => 'Plot No. 5, Knowledge Park II, Greater Noida, UP 201306',
     ],
-    
+
     // Social Media Links
     'social' => [
-        'facebook'  => 'https://facebook.com/spbsb',
-        'twitter'   => 'https://twitter.com/spbsb',
-        'linkedin'  => 'https://linkedin.com/school/spbsb',
+        'facebook' => 'https://facebook.com/spbsb',
+        'twitter' => 'https://twitter.com/spbsb',
+        'linkedin' => 'https://linkedin.com/school/spbsb',
         'instagram' => 'https://instagram.com/spbsb',
-        'youtube'   => 'https://youtube.com/spbsb',
+        'youtube' => 'https://youtube.com/spbsb',
     ],
-    
+
     // SEO Defaults
     'seo' => [
-        'default_title'       => 'SP Bansal School of Business',
+        'default_title' => 'SP Bansal School of Business',
         'default_description' => 'SP Bansal School of Business offers programs with excellent placements, world-class faculty, and state-of-the-art infrastructure.',
-        'og_image'            => '/assets/images/og-default.webp',
+        'og_image' => '/assets/images/og-default.webp',
     ],
-    
+
     // Asset versioning for cache busting
     'asset_version' => '1.0.0',
-    
+
     // Hero Slides
     'hero_slides' => [
         [
-            'category'    => 'CXO Talk',
-            'title'       => 'Mr. Tapan Sangal',
+            'category' => '',
+            'title' => '',
             'description' => 'Director at Kalp Foundation and Founder of MAI Labs',
-            'link'        => '/events/cxo-talk-tapan-sangal/',
-            'image'       => 'https://wallpapercave.com/wp/wp3990035.jpg',
-            'image_alt'   => 'Mr. Tapan Sangal speaking at CXO Talk',
+            'link' => null,
+            'image' => 'https://geetauniversity.edu.in/uploads/all/1913/spb.jpg',
+            'image_alt' => 'Mr. Tapan Sangal speaking at CXO Talk',
         ],
         [
-            'category'    => 'Guest Lecture',
-            'title'       => 'Industry Connect Series',
-            'description' => 'Learn from top industry leaders and gain real-world insights',
-            'link'        => '/events/industry-connect/',
-            'image'       => 'https://media.gettyimages.com/id/1739254128/photo/ahmedabad-india-sachin-tendulkar-poses-infront-of-the-dp-world-lorry-during-the-icc-mens.jpg?s=612x612&w=0&k=20&c=WP4nc-t1ftNYEgbHOM_QLOj1xK3S_w95WLOZlvYhwVs=',
-            'image_alt'   => 'Guest lecture session at SPBSB',
-        ],
-        [
-            'category'    => 'Admissions 2026',
-            'title'       => 'Shape Your Future',
+            'category' => 'Admissions 2026',
+            'title' => 'Shape Your Future',
             'description' => 'Applications now open for PGDM 2026-28 batch. Join one of India\'s premier B-Schools.',
-            'link'        => '/admissions/apply/',
-            'image'       => 'https://geetauniversity.edu.in/themes/geetau/image/video.webp',
-            'image_alt'   => 'SPBSB campus aerial view',
+            'link' => '/',
+            'image' => 'https://geetauniversity.edu.in/themes/geetau/image/video.webp',
+            'image_alt' => 'SPBSB campus aerial view',
         ],
     ],
-    
+
     // Programs
     'programs' => [
         [
-            'name'  => 'PGDM',
+            'name' => 'PGDM',
             'title' => 'PGDM Core',
-            'desc'  => 'Two-year full-time Post Graduate Diploma in Management',
-            'link'  => '/programs/pgdm/',
+            'desc' => 'Two-year full-time Post Graduate Diploma in Management',
+            'link' => '/programs/pgdm/',
         ],
         [
-            'name'  => 'PGDM-IBM',
+            'name' => 'PGDM-IBM',
             'title' => 'PGDM Insurance Business Management',
-            'desc'  => 'Specialized program for the insurance sector',
-            'link'  => '/programs/pgdm-ibm/',
+            'desc' => 'Specialized program for the insurance sector',
+            'link' => '/programs/pgdm-ibm/',
         ],
         [
-            'name'  => 'PGDM-IB',
+            'name' => 'PGDM-IB',
             'title' => 'PGDM International Business',
-            'desc'  => 'Global business perspective with international exposure',
-            'link'  => '/programs/pgdm-ib/',
+            'desc' => 'Global business perspective with international exposure',
+            'link' => '/programs/pgdm-ib/',
         ],
         [
-            'name'  => 'PGDM-RM',
+            'name' => 'PGDM-RM',
             'title' => 'PGDM Retail Management',
-            'desc'  => 'Comprehensive retail industry focused program',
-            'link'  => '/programs/pgdm-rm/',
+            'desc' => 'Comprehensive retail industry focused program',
+            'link' => '/programs/pgdm-rm/',
         ],
         [
-            'name'  => 'FPM',
+            'name' => 'FPM',
             'title' => 'Fellow Program in Management',
-            'desc'  => 'Doctoral level program equivalent to Ph.D.',
-            'link'  => '/programs/fpm/',
+            'desc' => 'Doctoral level program equivalent to Ph.D.',
+            'link' => '/programs/fpm/',
         ],
         [
-            'name'  => 'PGDM-Online',
+            'name' => 'PGDM-Online',
             'title' => 'PGDM Online',
-            'desc'  => 'Flexible online learning equivalent to MBA',
-            'link'  => '/programs/pgdm-online/',
+            'desc' => 'Flexible online learning equivalent to MBA',
+            'link' => '/programs/pgdm-online/',
         ],
     ],
-    
+
     // Statistics
     'stats' => [
-        ['value' => '35+',   'label' => 'Years of Excellence'],
-        ['value' => '500+',  'label' => 'Recruiting Companies'],
+        ['value' => '35+', 'label' => 'Years of Excellence'],
+        ['value' => '500+', 'label' => 'Recruiting Companies'],
         ['value' => '24.43', 'label' => 'LPA Highest Package'],
-        ['value' => '95%',   'label' => 'Placement Rate'],
+        ['value' => '95%', 'label' => 'Placement Rate'],
     ],
 ];

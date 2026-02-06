@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "tailwindcss -i ./src/css/input.css -o ./public/assets/css/main.css --watch",
     "build": "tailwindcss -i ./src/css/input.css -o ./public/assets/css/main.css --minify",
-    "serve": "php -S localhost:8000 -t public"
+    "serve": "php -S localhost:8000 -t public router.php"
   },
   "keywords": [],
   "author": "",
