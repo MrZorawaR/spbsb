@@ -1,0 +1,12 @@
+# SPBSB Institute Website
+
+User-agent: *
+Allow: /
+
+# Disallow admin/internal paths
+Disallow: /app/
+Disallow: /src/
+Disallow: /node_modules/
+
+# Sitemap
+Sitemap: https://spbsb.in/sitemap.xml

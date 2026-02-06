@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "tailwindcss -i ./src/css/input.css -o ./public/assets/css/main.css --watch",
+    "build": "tailwindcss -i ./src/css/input.css -o ./public/assets/css/main.css --minify",
+    "serve": "php -S localhost:8000 -t public"
   },
   "keywords": [],
   "author": "",
@@ -12,6 +14,7 @@
   "type": "commonjs",
   "devDependencies": {
     "autoprefixer": "^10.4.24",
+    "playwright": "^1.58.1",
     "postcss": "^8.5.6",
     "tailwindcss": "^3.4.17"
   }

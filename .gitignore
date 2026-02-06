@@ -39,3 +39,7 @@ Thumbs.db
 # =========================
 .cache/
 .tmp/
+storage/
+router.php
+capture-site.js
+package-lock.json
