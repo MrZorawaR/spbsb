@@ -41,4 +41,5 @@
 <?php endif; ?>
 <?php if (!empty($useSwiper)): ?>
     <link rel="stylesheet" href="/assets/vendor/swiper/swiper-bundle.min.css?v=<?php echo $config['asset_version']; ?>">
+    <link rel="stylesheet" href="/assets/css/swiper-custom.css?v=<?php echo $config['asset_version']; ?>">
 <?php endif; ?>

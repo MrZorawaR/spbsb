@@ -70,7 +70,7 @@ require INCLUDES_PATH . '/header.php';
 <section class="py-10">
     <div class="text-center">
         <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mt-3 mb-4">World Class Infrastructure</h2>
-        <p class="text-gray-600 max-w-2xl mx-auto">Discover our modern facilities designed to foster innovation,
+        <p class="text-gray-600 max-w-5xl mx-auto">Discover our modern facilities designed to foster innovation,
             collaboration, and academic excellence.</p>
     </div>
 </section>
@@ -79,7 +79,7 @@ require INCLUDES_PATH . '/header.php';
 <?php require INCLUDES_PATH . '/virtualTour.php'; ?>
 
 <section class="py-10">
-    <div class="container mx-auto px-4">
+    <div class="max-w-7xl mx-auto px-4">
         <div class="swiper facilitiesSwiper">
             <div class="swiper-wrapper">
                 <!-- Classrooms Card -->
@@ -235,9 +235,9 @@ require INCLUDES_PATH . '/header.php';
 
 <!-- Sports Facilities Section -->
 <section class="" id="sports">
-    <div class="container mx-auto px-4">
+    <div class="max-w-7xl mx-auto px-4">
 
-        <div class="text-center mb-5">
+        <div class="text-center mb-10">
             <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mt-3 mb-4">Sports Facilities</h2>
             <p class="text-gray-600 max-w-5xl mx-auto">At Geeta University, we encourage students to take part in
                 various sports activities to stay active and fit. Our outdoor sports facilities span over 10+ acres,
@@ -375,145 +375,148 @@ require INCLUDES_PATH . '/header.php';
 </section>
 
 <!-- Events Section -->
-<section class="max-w-7xl mx-auto px-4 py-10" id="events">
-    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-3">Events</h2>
-    <div class="h-1 w-20 bg-gradient-to-r from-primary to-primary-light my-4 rounded-sm"></div>
-    <p class="text-gray-600 mb-12 max-w-3xl">Experience the vibrant cultural and academic events that make Geeta
-        University a hub of creativity and innovation.</p>
-
-    <!-- Video Thumbnail -->
-    <div class="flex justify-center items-center mb-12">
-        <div class="relative w-full md:w-2/3 lg:w-1/2">
-            <img src="https://geetauniversity.edu.in/uploads/all/1797/16.jpg" alt="University events showcase"
-                class="w-full rounded-3xl shadow-2xl cursor-pointer transition-transform hover:scale-105"
-                onclick="openVideoModal('https://www.youtube.com/embed/D-TW0dcqMDA?autoplay=1')" width="800"
-                height="450" loading="lazy">
-            <button
-                class="play-button w-16 h-16 md:w-20 md:h-20 bg-white rounded-full flex items-center justify-center cursor-pointer transition-all duration-300 shadow-[0_8px_30px_rgba(0,0,0,0.3)] hover:scale-110 hover:shadow-[0_12px_40px_rgba(0,0,0,0.4)] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
-                onclick="openVideoModal('https://www.youtube.com/embed/D-TW0dcqMDA?autoplay=1')"
-                aria-label="Play Events Video"></button>
+<section class="bg-slate-100" id="events">
+    <div class="max-w-7xl mx-auto px-4 py-10 ">
+        <div class="text-center mb-10">
+            <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mt-3 mb-4">Events</h2>
+            <p class="text-gray-600 max-w-5xl mx-auto">Experience the vibrant cultural and academic events that make
+                Geeta
+                University a hub of creativity and innovation.</p>
         </div>
-    </div>
 
-    <!-- Events Swiper -->
-    <div class="swiper eventsSwiper">
-        <div class="swiper-wrapper">
-            <!-- Sports Meet Card -->
-            <div class="swiper-slide h-auto">
-                <article
-                    class="bg-white rounded-3xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.08)] transition-all duration-400 ease-out hover:-translate-y-2 hover:shadow-[0_12px_35px_rgba(0,0,0,0.15)] h-full flex flex-col">
-                    <div class="relative overflow-hidden h-[260px]">
-                        <img src="https://geetauniversity.edu.in/uploads/all/1825/27.jpg" alt="Annual Sports Meet"
-                            class="w-full h-full object-cover transition-transform duration-600 ease-out" width="400"
-                            height="260" loading="lazy">
-                    </div>
-                    <div class="p-6 bg-light-blue flex-grow">
-                        <h4 class="text-xl font-bold text-primary mb-2">Sports Meet</h4>
-                        <p class="text-gray-700 text-sm">Celebrating Sports, Celebrating Spirit</p>
-                    </div>
-                </article>
-            </div>
-
-            <!-- Bizz Fiesta Card -->
-            <div class="swiper-slide h-auto">
-                <article
-                    class="bg-white rounded-3xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.08)] transition-all duration-400 ease-out hover:-translate-y-2 hover:shadow-[0_12px_35px_rgba(0,0,0,0.15)] h-full flex flex-col">
-                    <div class="relative overflow-hidden h-[260px]">
-                        <img src="https://geetauniversity.edu.in/uploads/all/1799/17.jpg" alt="Bizz Fiesta event"
-                            class="w-full h-full object-cover transition-transform duration-600 ease-out" width="400"
-                            height="260" loading="lazy">
-                    </div>
-                    <div class="p-6 bg-light-blue flex-grow">
-                        <h4 class="text-xl font-bold text-primary mb-2">Bizz Fiesta</h4>
-                        <p class="text-gray-700 text-sm">Celebrating Creativity, Strategy & Success</p>
-                    </div>
-                </article>
-            </div>
-
-            <!-- Sangri'la Card -->
-            <div class="swiper-slide h-auto">
-                <article
-                    class="bg-white rounded-3xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.08)] transition-all duration-400 ease-out hover:-translate-y-2 hover:shadow-[0_12px_35px_rgba(0,0,0,0.15)] h-full flex flex-col">
-                    <div class="relative overflow-hidden h-[260px]">
-                        <img src="https://geetauniversity.edu.in/uploads/all/1807/26.jpg"
-                            alt="Sangri'la cultural festival"
-                            class="w-full h-full object-cover transition-transform duration-600 ease-out" width="400"
-                            height="260" loading="lazy">
-                    </div>
-                    <div class="p-6 bg-light-blue flex-grow">
-                        <h4 class="text-xl font-bold text-primary mb-2">Sangri'la</h4>
-                        <p class="text-gray-700 text-sm">One Stage, Infinite Stories</p>
-                    </div>
-                </article>
-            </div>
-
-            <!-- Literature Fest Card -->
-            <div class="swiper-slide h-auto">
-                <article
-                    class="bg-white rounded-3xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.08)] transition-all duration-400 ease-out hover:-translate-y-2 hover:shadow-[0_12px_35px_rgba(0,0,0,0.15)] h-full flex flex-col">
-                    <div class="relative overflow-hidden h-[260px]">
-                        <img src="https://geetauniversity.edu.in/uploads/all/1811/28.jpg" alt="Literature Festival"
-                            class="w-full h-full object-cover transition-transform duration-600 ease-out" width="400"
-                            height="260" loading="lazy">
-                    </div>
-                    <div class="p-6 bg-light-blue flex-grow">
-                        <h4 class="text-xl font-bold text-primary mb-2">Literature Fest</h4>
-                        <p class="text-gray-700 text-sm">Unfolding Thoughts, Uniting Minds</p>
-                    </div>
-                </article>
-            </div>
-
-            <!-- Orientation Card -->
-            <div class="swiper-slide h-auto">
-                <article
-                    class="bg-white rounded-3xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.08)] transition-all duration-400 ease-out hover:-translate-y-2 hover:shadow-[0_12px_35px_rgba(0,0,0,0.15)] h-full flex flex-col">
-                    <div class="relative overflow-hidden h-[260px]">
-                        <img src="https://geetauniversity.edu.in/uploads/all/1810/30.jpg" alt="New student orientation"
-                            class="w-full h-full object-cover transition-transform duration-600 ease-out" width="400"
-                            height="260" loading="lazy">
-                    </div>
-                    <div class="p-6 bg-light-blue flex-grow">
-                        <h4 class="text-xl font-bold text-primary mb-2">Orientation</h4>
-                        <p class="text-gray-700 text-sm">From Fresh Faces to Family</p>
-                    </div>
-                </article>
-            </div>
-
-            <!-- Fashion Parade Card -->
-            <div class="swiper-slide h-auto">
-                <article
-                    class="bg-white rounded-3xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.08)] transition-all duration-400 ease-out hover:-translate-y-2 hover:shadow-[0_12px_35px_rgba(0,0,0,0.15)] h-full flex flex-col">
-                    <div class="relative overflow-hidden h-[260px]">
-                        <img src="https://geetauniversity.edu.in/uploads/all/1823/29.jpg" alt="Fashion Parade"
-                            class="w-full h-full object-cover transition-transform duration-600 ease-out" width="400"
-                            height="260" loading="lazy">
-                    </div>
-                    <div class="p-6 bg-light-blue flex-grow">
-                        <h4 class="text-xl font-bold text-primary mb-2">Fashion Parade</h4>
-                        <p class="text-gray-700 text-sm">Fashion in Motion, Elegance in Action</p>
-                    </div>
-                </article>
+        <!-- Video Thumbnail -->
+        <div class="flex justify-center items-center mb-12">
+            <div class="relative w-full md:w-2/3 lg:w-1/2">
+                <img src="https://geetauniversity.edu.in/uploads/all/1797/16.jpg" alt="University events showcase"
+                    class="w-full rounded-3xl shadow-2xl cursor-pointer transition-transform hover:shadow-xl"
+                    onclick="openVideoModal('https://www.youtube.com/embed/D-TW0dcqMDA?autoplay=1')" width="800"
+                    height="450" loading="lazy">
+                <button
+                    class="play-button w-16 h-16 md:w-20 md:h-20 bg-white rounded-full flex items-center justify-center cursor-pointer transition-all duration-300 shadow-[0_8px_30px_rgba(0,0,0,0.3)] hover:scale-105 hover:shadow-[0_12px_40px_rgba(0,0,0,0.4)] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+                    onclick="openVideoModal('https://www.youtube.com/embed/D-TW0dcqMDA?autoplay=1')"
+                    aria-label="Play Events Video"></button>
             </div>
         </div>
 
-        <!-- Navigation -->
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
+        <!-- Events Swiper -->
+        <div class="swiper eventsSwiper">
+            <div class="swiper-wrapper">
+                <!-- Sports Meet Card -->
+                <div class="swiper-slide h-auto">
+                    <article
+                        class="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-lg transition h-full flex flex-col">
+                        <div class="relative overflow-hidden h-[260px]">
+                            <img src="https://geetauniversity.edu.in/uploads/all/1825/27.jpg" alt="Annual Sports Meet"
+                                class="w-full h-full object-cover transition-transform duration-600 ease-out"
+                                width="400" height="260" loading="lazy">
+                        </div>
+                        <div class="p-6 bg-light-blue flex-grow">
+                            <h4 class="text-xl font-bold text-primary mb-2">Sports Meet</h4>
+                            <p class="text-gray-700 text-sm">Celebrating Sports, Celebrating Spirit</p>
+                        </div>
+                    </article>
+                </div>
 
-        <!-- Pagination -->
-        <div class="swiper-pagination"></div>
+                <!-- Bizz Fiesta Card -->
+                <div class="swiper-slide h-auto">
+                    <article
+                        class="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-lg transition h-full flex flex-col">
+                        <div class="relative overflow-hidden h-[260px]">
+                            <img src="https://geetauniversity.edu.in/uploads/all/1799/17.jpg" alt="Bizz Fiesta event"
+                                class="w-full h-full object-cover transition-transform duration-600 ease-out"
+                                width="400" height="260" loading="lazy">
+                        </div>
+                        <div class="p-6 bg-light-blue flex-grow">
+                            <h4 class="text-xl font-bold text-primary mb-2">Bizz Fiesta</h4>
+                            <p class="text-gray-700 text-sm">Celebrating Creativity, Strategy & Success</p>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Sangri'la Card -->
+                <div class="swiper-slide h-auto">
+                    <article
+                        class="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-lg transition h-full flex flex-col">
+                        <div class="relative overflow-hidden h-[260px]">
+                            <img src="https://geetauniversity.edu.in/uploads/all/1807/26.jpg"
+                                alt="Sangri'la cultural festival"
+                                class="w-full h-full object-cover transition-transform duration-600 ease-out"
+                                width="400" height="260" loading="lazy">
+                        </div>
+                        <div class="p-6 bg-light-blue flex-grow">
+                            <h4 class="text-xl font-bold text-primary mb-2">Sangri'la</h4>
+                            <p class="text-gray-700 text-sm">One Stage, Infinite Stories</p>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Literature Fest Card -->
+                <div class="swiper-slide h-auto">
+                    <article
+                        class="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-lg transition h-full flex flex-col">
+                        <div class="relative overflow-hidden h-[260px]">
+                            <img src="https://geetauniversity.edu.in/uploads/all/1811/28.jpg" alt="Literature Festival"
+                                class="w-full h-full object-cover transition-transform duration-600 ease-out"
+                                width="400" height="260" loading="lazy">
+                        </div>
+                        <div class="p-6 bg-light-blue flex-grow">
+                            <h4 class="text-xl font-bold text-primary mb-2">Literature Fest</h4>
+                            <p class="text-gray-700 text-sm">Unfolding Thoughts, Uniting Minds</p>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Orientation Card -->
+                <div class="swiper-slide h-auto">
+                    <article
+                        class="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-lg transition h-full flex flex-col">
+                        <div class="relative overflow-hidden h-[260px]">
+                            <img src="https://geetauniversity.edu.in/uploads/all/1810/30.jpg"
+                                alt="New student orientation"
+                                class="w-full h-full object-cover transition-transform duration-600 ease-out"
+                                width="400" height="260" loading="lazy">
+                        </div>
+                        <div class="p-6 bg-light-blue flex-grow">
+                            <h4 class="text-xl font-bold text-primary mb-2">Orientation</h4>
+                            <p class="text-gray-700 text-sm">From Fresh Faces to Family</p>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Fashion Parade Card -->
+                <div class="swiper-slide h-auto">
+                    <article
+                        class="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-lg transition h-full flex flex-col">
+                        <div class="relative overflow-hidden h-[260px]">
+                            <img src="https://geetauniversity.edu.in/uploads/all/1823/29.jpg" alt="Fashion Parade"
+                                class="w-full h-full object-cover transition-transform duration-600 ease-out"
+                                width="400" height="260" loading="lazy">
+                        </div>
+                        <div class="p-6 bg-light-blue flex-grow">
+                            <h4 class="text-xl font-bold text-primary mb-2">Fashion Parade</h4>
+                            <p class="text-gray-700 text-sm">Fashion in Motion, Elegance in Action</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <!-- Navigation -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+
+            <!-- Pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
     </div>
 </section>
 
 <section class="bg-gray-50 py-16" id="eminent-personalities">
     <div class="max-w-7xl mx-auto px-4">
         <!-- Heading -->
-        <div class="mb-10">
-            <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Eminent Personalities at GU</h2>
-            <div class="h-1 w-20 bg-gradient-to-r from-primary to-primary-light my-4 rounded-sm"></div>
-            <p class="text-gray-600 max-w-2xl">
-                Distinguished leaders, innovators and public figures who have visited and inspired our students.
-            </p>
+        <div class="text-center mb-10">
+            <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mt-3 mb-4">Eminent Personalities @ GU</h2>
+            <p class="text-gray-600 max-w-5xl mx-auto">Distinguished leaders, innovators and public figures who have
+                visited and inspired our students.</p>
         </div>
 
         <!-- Swiper for Eminent Personalities -->

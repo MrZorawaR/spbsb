@@ -6,68 +6,6 @@ $config = require __DIR__ . '/../config/site.php';
 
 <head>
     <?php include __DIR__ . '/meta.php'; ?>
-    <style>
-        /* Swiper Custom Styles */
-        .swiper {
-            width: 100%;
-            padding-bottom: 50px !important;
-        }
-
-        /* Custom Navigation Buttons */
-        .swiper-button-next,
-        .swiper-button-prev {
-            width: 48px;
-            height: 48px;
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 50%;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-            transition: all 0.3s ease;
-        }
-
-        .swiper-button-next:hover,
-        .swiper-button-prev:hover {
-            background: white;
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-            transform: scale(1.1);
-        }
-
-        .swiper-button-next::after,
-        .swiper-button-prev::after {
-            font-size: 20px;
-            color: #06355F;
-            font-weight: bold;
-        }
-
-        /* Custom Pagination */
-        .swiper-pagination-bullet {
-            width: 10px;
-            height: 10px;
-            background: #cbd5e1;
-            opacity: 1;
-            transition: all 0.3s ease;
-        }
-
-        .swiper-pagination-bullet-active {
-            background: #06355F;
-            width: 32px;
-            border-radius: 5px;
-        }
-
-        /* Mobile Swiper Buttons */
-        @media (max-width: 768px) {
-
-            .swiper-button-next,
-            .swiper-button-prev {
-                width: 40px;
-                height: 40px;
-            }
-
-            .swiper-button-next::after,
-            .swiper-button-prev::after {
-                font-size: 16px;
-            }
-        }
-    </style>
 </head>
 
 <body class="antialiased text-gray-900 bg-white">
@@ -175,12 +113,12 @@ $config = require __DIR__ . '/../config/site.php';
                         </button>
 
                         <div
-                            class="absolute left-1/2 -translate-x-1/2 top-full pt-0 w-[800px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 group-focus-within:opacity-100 group-focus-within:visible">
+                            class="absolute left-1/2 -translate-x-1/2 top-full pt-0 w-max opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 group-focus-within:opacity-100 group-focus-within:visible">
                             <div class="bg-white shadow-xl border border-gray-200 rounded-b-lg">
                                 <div class="p-8">
                                     <p class="font-semibold text-primary-600 mb-6 text-sm uppercase tracking-wide">Find
                                         Your Program</p>
-                                    <div class="grid grid-cols-2 gap-4">
+                                    <div class="grid gap-4">
                                         <?php foreach ($config['programs'] as $program): ?>
                                             <a href="<?php echo $program['link']; ?>"
                                                 class="block p-4 rounded-lg bg-gray-50 hover:bg-primary-50 hover:border-primary-200 border border-transparent transition-all group/card">
@@ -237,7 +175,7 @@ $config = require __DIR__ . '/../config/site.php';
                     <a href="/campus-life/" class="px-4 py-6 hover:text-primary-600 transition-colors">
                         Campus Life
                     </a>
-                    <a href="#" class="px-4 py-6 hover:text-primary-600 transition-colors">
+                    <a href="/academics/" class="px-4 py-6 hover:text-primary-600 transition-colors">
                         Academics
                     </a>
                 </nav>
@@ -315,7 +253,8 @@ $config = require __DIR__ . '/../config/site.php';
                     </div>
                 </details>
 
-                <a href="#" class="block py-4 text-lg font-semibold text-gray-900 hover:text-primary-600">Academics</a>
+                <a href="/academics/"
+                    class="block py-4 text-lg font-semibold text-gray-900 hover:text-primary-600">Academics</a>
                 <a href="#" class="block py-4 text-lg font-semibold text-gray-900 hover:text-primary-600">Campus
                     Life</a>
                 <a href="#" class="block py-4 text-lg font-semibold text-gray-900 hover:text-primary-600">Admissions</a>

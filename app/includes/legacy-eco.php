@@ -60,7 +60,7 @@
 
             <div class="md:col-span-5">
                 <div class="relative rounded-lg overflow-hidden shadow-lg border border-gray-200">
-                    <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAweqaQW6o7WvsvOanh_RcSmtZy9uqgb83KTroVGs6ogkMQHz9GKHr4scSn-yN2YwiXRmC-E_4S0TvHSUlGP194dR1jODI_IdKICcYb9mDMOk8TL2NLzGNikG7OW_--Q05OTcCtV3jpA=w408-h409-k-no"
+                    <img src="https://geetauniversity.edu.in/uploads/all/253/f-block-(1).webp"
                         alt="Geeta Group Ecosystem" class="w-full h-full object-cover aspect-[1/1]" loading="lazy" />
                 </div>
             </div>
