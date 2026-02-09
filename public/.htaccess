@@ -1,4 +1,3 @@
-THIS_SHOULD_BREAK
 # ===================================================
 # SPBSB Institute - Apache Configuration
 # ===================================================
@@ -8,8 +7,8 @@ RewriteEngine On
 # ---------------------------------------------------
 # FORCE HTTPS (enable in production)
 # ---------------------------------------------------
-# RewriteCond %{HTTPS} off
-# RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
 # ---------------------------------------------------
 # REAL 404 FOR NON-EXISTENT PAGES (CRITICAL FIX)
