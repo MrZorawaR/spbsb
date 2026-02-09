@@ -1,7 +1,7 @@
 <!-- Video Modal -->
 <div id="video-modal" class="fixed inset-0 z-[60] hidden items-center justify-center bg-white/70 ">
 
-    <div class="relative w-full max-w-4xl mx-4 bg-black rounded-lg overflow-hidden pt-10 bg-white">
+    <div class="relative w-full max-w-4xl mx-4 rounded-lg overflow-hidden pt-10 bg-white">
 
         <button id="close-video" class="absolute top-3 right-3 z-10 text-black text-2xl">
             ✕
@@ -22,11 +22,11 @@
 
     <!-- Main Footer Content -->
     <div class="max-w-7xl mx-auto px-6 py-16">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
 
-            <!-- Column 1: About -->
             <div>
-                 <img src="https://geetauniversity.edu.in/uploads/all/1985/Sp-Bansal-School-of-business.webp" alt="<?php echo $config['site_name']; ?> Logo" class="h-10 w-auto">
+                <img src="https://geetauniversity.edu.in/uploads/all/1985/Sp-Bansal-School-of-business.webp"
+                    alt="<?php echo $config['site_name']; ?> Logo" class="h-10 w-auto">
                 <p class="text-white/70 text-sm leading-relaxed my-6">
                     <?php echo $config['site_tagline']; ?>. Providing world-class management education with a focus on
                     holistic development, ethical leadership, and global perspectives.
@@ -35,7 +35,7 @@
                 <!-- Social Icons -->
                 <div class="flex items-center gap-3">
                     <a href="<?php echo $config['social']['facebook']; ?>" target="_blank" rel="noopener"
-                        class="w-10 h-10 bg-white/10 hover:bg-accent-500 rounded-lg flex items-center justify-center transition-colors"
+                        class="w-10 h-10 bg-white/10 hover:bg-secondary-500 rounded-lg flex items-center justify-center transition-colors"
                         aria-label="Facebook">
                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                             <path
@@ -43,7 +43,7 @@
                         </svg>
                     </a>
                     <a href="<?php echo $config['social']['twitter']; ?>" target="_blank" rel="noopener"
-                        class="w-10 h-10 bg-white/10 hover:bg-accent-500 rounded-lg flex items-center justify-center transition-colors"
+                        class="w-10 h-10 bg-white/10 hover:bg-secondary-500 rounded-lg flex items-center justify-center transition-colors"
                         aria-label="Twitter">
                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                             <path
@@ -51,7 +51,7 @@
                         </svg>
                     </a>
                     <a href="<?php echo $config['social']['linkedin']; ?>" target="_blank" rel="noopener"
-                        class="w-10 h-10 bg-white/10 hover:bg-accent-500 rounded-lg flex items-center justify-center transition-colors"
+                        class="w-10 h-10 bg-white/10 hover:bg-secondary-500 rounded-lg flex items-center justify-center transition-colors"
                         aria-label="LinkedIn">
                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                             <path
@@ -59,7 +59,7 @@
                         </svg>
                     </a>
                     <a href="<?php echo $config['social']['instagram']; ?>" target="_blank" rel="noopener"
-                        class="w-10 h-10 bg-white/10 hover:bg-accent-500 rounded-lg flex items-center justify-center transition-colors"
+                        class="w-10 h-10 bg-white/10 hover:bg-secondary-500 rounded-lg flex items-center justify-center transition-colors"
                         aria-label="Instagram">
                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                             <path
@@ -67,7 +67,7 @@
                         </svg>
                     </a>
                     <a href="<?php echo $config['social']['youtube']; ?>" target="_blank" rel="noopener"
-                        class="w-10 h-10 bg-white/10 hover:bg-accent-500 rounded-lg flex items-center justify-center transition-colors"
+                        class="w-10 h-10 bg-white/10 hover:bg-secondary-500 rounded-lg flex items-center justify-center transition-colors"
                         aria-label="YouTube">
                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                             <path
@@ -77,48 +77,23 @@
                 </div>
             </div>
 
-            <!-- Column 2: Quick Links -->
             <div>
                 <h4 class="font-semibold text-lg mb-6">Quick Links</h4>
                 <ul class="space-y-3 text-sm">
-                    <li><a href="/about/" class="text-white/70 hover:text-accent-400 transition-colors">About Us</a>
+                    <li><a href="/about/" class="text-white/70 hover:text-secondary-400 transition-colors">About Us</a>
                     </li>
-                    <li><a href="/programs/" class="text-white/70 hover:text-accent-400 transition-colors">Programs</a>
+                    <li><a href="/programs/"
+                            class="text-white/70 hover:text-secondary-400 transition-colors">Programs</a>
                     </li>
                     <li><a href="/admissions/"
-                            class="text-white/70 hover:text-accent-400 transition-colors">Admissions</a></li>
-                    <li><a href="/placements/"
-                            class="text-white/70 hover:text-accent-400 transition-colors">Placements</a></li>
-                    <li><a href="/faculty/" class="text-white/70 hover:text-accent-400 transition-colors">Faculty</a>
-                    </li>
-                    <li><a href="/research/" class="text-white/70 hover:text-accent-400 transition-colors">Research</a>
-                    </li>
-                    <li><a href="/contact/" class="text-white/70 hover:text-accent-400 transition-colors">Contact Us</a>
+                            class="text-white/70 hover:text-secondary-400 transition-colors">Admissions</a></li>
+                    <li><a href="/contact/" class="text-white/70 hover:text-secondary-400 transition-colors">Contact
+                            Us</a>
                     </li>
                 </ul>
             </div>
 
-            <!-- Column 3: Important Links -->
-            <div>
-                <h4 class="font-semibold text-lg mb-6">Important Links</h4>
-                <ul class="space-y-3 text-sm">
-                    <li><a href="/mandatory-disclosure/"
-                            class="text-white/70 hover:text-accent-400 transition-colors">Mandatory Disclosure</a></li>
-                    <li><a href="/grievance/" class="text-white/70 hover:text-accent-400 transition-colors">Grievance
-                            Redressal</a></li>
-                    <li><a href="/anti-ragging/"
-                            class="text-white/70 hover:text-accent-400 transition-colors">Anti-Ragging Policy</a></li>
-                    <li><a href="/careers/" class="text-white/70 hover:text-accent-400 transition-colors">Careers</a>
-                    </li>
-                    <li><a href="/tenders/" class="text-white/70 hover:text-accent-400 transition-colors">Tenders</a>
-                    </li>
-                    <li><a href="/alumni/" class="text-white/70 hover:text-accent-400 transition-colors">Alumni</a></li>
-                    <li><a href="/portals/" class="text-white/70 hover:text-accent-400 transition-colors">Student
-                            Portal</a></li>
-                </ul>
-            </div>
 
-            <!-- Column 4: Contact -->
             <div>
                 <h4 class="font-semibold text-lg mb-6">Contact Us</h4>
                 <ul class="space-y-4 text-sm">
@@ -139,7 +114,7 @@
                                 d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                         </svg>
                         <a href="tel:<?php echo $config['contact']['phone']; ?>"
-                            class="text-white/70 hover:text-accent-400 transition-colors"><?php echo $config['contact']['phone']; ?></a>
+                            class="text-white/70 hover:text-secondary-400 transition-colors"><?php echo $config['contact']['phone']; ?></a>
                     </li>
                     <li class="flex items-center gap-3">
                         <svg class="w-5 h-5 text-white flex-shrink-0" fill="none" stroke="currentColor"
@@ -148,23 +123,15 @@
                                 d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                         </svg>
                         <a href="mailto:<?php echo $config['contact']['email']; ?>"
-                            class="text-white/70 hover:text-accent-400 transition-colors"><?php echo $config['contact']['email']; ?></a>
-                    </li>
-                    <li class="flex items-center gap-3">
-                        <svg class="w-5 h-5 text-white flex-shrink-0" fill="none" stroke="currentColor"
-                            viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                        </svg>
-                        <span class="text-white/70">Toll Free: <?php echo $config['contact']['toll_free']; ?></span>
+                            class="text-white/70 hover:text-secondary-400 transition-colors"><?php echo $config['contact']['email']; ?></a>
                     </li>
                 </ul>
 
                 <!-- Admissions CTA -->
                 <div class="mt-6 p-4 bg-white/10 rounded-lg">
-                    <p class="text-sm font-semibold mb-2">Admissions Open 2026-28</p>
+                    <p class="text-sm font-semibold mb-2">Admissions Open 2026-27</p>
                     <a href="/admissions/apply/"
-                        class="inline-flex items-center text-sm text-accent-400 hover:text-accent-300 font-medium transition-colors">
+                        class="inline-flex items-center text-sm text-secondary-400 hover:text-secondary-300 font-medium transition-colors">
                         Apply Now
                         <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
@@ -192,6 +159,10 @@
 
 <!-- JavaScript -->
 <script src="/assets/js/main.js?v=<?php echo $config['asset_version']; ?>" defer></script>
+<?php if (!empty($useSwiper)): ?>
+    <script src="/assets/vendor/swiper/swiper-bundle.min.js?v=<?php echo $config['asset_version']; ?>" defer></script>
+    <script src="/assets/js/swiper-init.js?v=<?php echo $config['asset_version']; ?>" defer></script>
+<?php endif; ?>
 </body>
 
 </html>

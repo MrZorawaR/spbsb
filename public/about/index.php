@@ -3,7 +3,7 @@ $config = require_once __DIR__ . '/../../app/config/site.php';
 
 $title = "About SPBSB - Top PGDM Colleges in Panipat";
 $description = "SPBSB Institute of Management offers AICTE approved PGDM programs with 24 LPA highest package, world-class faculty, and 95%+ placement rate. Apply now for 2026-28 batch.";
-$canonical = "https://spbsb.in/";
+$canonical = "https://spbsb.in/about/";
 $preload_hero = true;
 
 require INCLUDES_PATH . '/header.php';
@@ -942,6 +942,5 @@ require INCLUDES_PATH . '/header.php';
         });
     });
 </script>
-
 
 <?php require INCLUDES_PATH . '/footer.php'; ?>

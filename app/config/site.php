@@ -20,10 +20,10 @@ return [
 
     // Contact Information
     'contact' => [
-        'phone' => '+91-120-6843000',
-        'toll_free' => '1800 5723 999',
+        'phone' => '092787 68000',
+        'toll_free' => '1800 ** ** ****',
         'email' => 'admissions@spbsb.in',
-        'address' => 'Plot No. 5, Knowledge Park II, Greater Noida, UP 201306',
+        'address' => 'NH-71, Naultha, Panipat, Haryana 132145',
     ],
 
     // Social Media Links
@@ -68,41 +68,18 @@ return [
     // Programs
     'programs' => [
         [
-            'name' => 'PGDM',
-            'title' => 'PGDM Core',
-            'desc' => 'Two-year full-time Post Graduate Diploma in Management',
-            'link' => '/programs/pgdm/',
+            'name' => 'MBA',
+            'title' => 'MBA Core & Specializations',
+            'desc' => 'Two-year full-time Master of Business Administration',
+            'link' => '#',
         ],
         [
-            'name' => 'PGDM-IBM',
-            'title' => 'PGDM Insurance Business Management',
-            'desc' => 'Specialized program for the insurance sector',
-            'link' => '/programs/pgdm-ibm/',
-        ],
-        [
-            'name' => 'PGDM-IB',
-            'title' => 'PGDM International Business',
-            'desc' => 'Global business perspective with international exposure',
-            'link' => '/programs/pgdm-ib/',
-        ],
-        [
-            'name' => 'PGDM-RM',
-            'title' => 'PGDM Retail Management',
-            'desc' => 'Comprehensive retail industry focused program',
-            'link' => '/programs/pgdm-rm/',
-        ],
-        [
-            'name' => 'FPM',
-            'title' => 'Fellow Program in Management',
+            'name' => 'Ph.D.',
+            'title' => 'Ph.D. in Management',
             'desc' => 'Doctoral level program equivalent to Ph.D.',
-            'link' => '/programs/fpm/',
+            'link' => '#',
         ],
-        [
-            'name' => 'PGDM-Online',
-            'title' => 'PGDM Online',
-            'desc' => 'Flexible online learning equivalent to MBA',
-            'link' => '/programs/pgdm-online/',
-        ],
+        
     ],
 
     // Statistics

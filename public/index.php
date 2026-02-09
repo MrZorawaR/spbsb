@@ -12,7 +12,7 @@ require INCLUDES_PATH . '/header.php';
 <main>
     <!-- Hero Section with Carousel -->
     <section id="hero"
-        class="relative h-[50vh] md:h-[75vh] lg:h-[85vh] overflow-hidden bg-black animate-fade motion-reduce:animate-none"
+        class="relative h-[30vh] md:h-[75vh] lg:h-[85vh] overflow-hidden bg-black animate-fade motion-reduce:animate-none"
         aria-label="Featured highlights">
         <div id="hero-slides" class="relative h-full w-full">
 
@@ -35,9 +35,9 @@ require INCLUDES_PATH . '/header.php';
                                 class="h-10 mb-4 object-contain" />
                         <?php endif; ?>
 
-                        <h2 class="text-2xl font-light text-white leading-snug mb-2">
+                        <p class="text-2xl font-bold text-white leading-snug mb-2">
                             <?php echo htmlspecialchars($slide['title']); ?>
-                        </h2>
+                        </p>
 
                         <span class="text-lg font-semibold text-yellow-400 mb-5">
                             <?php echo htmlspecialchars($slide['category']); ?>
@@ -62,15 +62,16 @@ require INCLUDES_PATH . '/header.php';
                                     class="h-16 mb-8 object-contain" />
                             <?php endif; ?>
 
-                            <h2 class="text-4xl lg:text-5xl font-light leading-tight mb-4">
+                            <p class="text-4xl lg:text-5xl font-bold leading-tight mb-4">
                                 <?php echo htmlspecialchars($slide['title']); ?>
-                            </h2>
+                            </p>
 
                             <span class="text-2xl font-bold text-yellow-400 block mb-8">
                                 <?php echo htmlspecialchars($slide['category']); ?>
                             </span>
                             <?php if (!empty($slide['link'])): ?>
-                                <a href="<?php echo htmlspecialchars($slide['link']); ?>" class="inline-block px-8 py-3 bg-secondary-500 hover:bg-secondary-600 text-white text-sm font-medium">
+                                <a href="<?php echo htmlspecialchars($slide['link']); ?>"
+                                    class="inline-block px-8 py-3 bg-secondary-500 hover:bg-secondary-600 text-white text-sm font-medium">
                                     Read More
                                 </a>
                             <?php endif; ?>
@@ -78,12 +79,15 @@ require INCLUDES_PATH . '/header.php';
                     </div>
 
                     <!-- CONTROLS (MOBILE + DESKTOP RESPONSIVE) -->
-                    <div class="absolute z-40 inset-y-1/2 -translate-y-1/2 left-0 right-0 flex justify-between px-4 md:inset-auto md:translate-y-0 md:bottom-20 md:left-[6.5%] md:right-auto md:px-0 md:justify-start md:gap-4">
-                        <button id="hero-prev" aria-label="Previous slide" class=" w-10 h-10 flex items-center justify-center text-white transition md:rounded-full md:border md:border-white md:hover:bg-white md:hover:text-black">
+                    <div
+                        class="absolute z-40 inset-y-1/2 -translate-y-1/2 left-0 right-0 flex justify-between px-4 md:inset-auto md:translate-y-0 md:bottom-20 md:left-[6.5%] md:right-auto md:px-0 md:justify-start md:gap-4">
+                        <button id="hero-prev" aria-label="Previous slide"
+                            class=" w-10 h-10 flex items-center justify-center text-white transition md:rounded-full md:border md:border-white md:hover:bg-white md:hover:text-black">
                             ‹
                         </button>
 
-                        <button id="hero-next" aria-label="Next slide" class=" w-10 h-10 flex items-center justify-center text-white transition md:rounded-full md:border md:border-white md:hover:bg-white md:hover:text-black ">
+                        <button id="hero-next" aria-label="Next slide"
+                            class=" w-10 h-10 flex items-center justify-center text-white transition md:rounded-full md:border md:border-white md:hover:bg-white md:hover:text-black ">
                             ›
                         </button>
                     </div>
@@ -160,28 +164,8 @@ require INCLUDES_PATH . '/header.php';
     </section>
 
     <!-- Virtual Campus Banner -->
-    <section class="relative flex items-center justify-center text-center text-white
-         h-[60vh] max-md:h-[38vh] overflow-hidden">
+    <?php require INCLUDES_PATH . '/virtualTour.php'; ?>
 
-        <img src="https://geetauniversity.edu.in/themes/geetau/image/video.webp" alt="Virtual Campus Background"
-            loading="lazy" class="absolute inset-0 w-full h-full object-cover" />
-
-        <div class="absolute inset-0 bg-black/50"></div>
-
-        <div class="relative z-10">
-            <button id="open-video" class="mx-auto flex items-center justify-center
-             w-20 h-20 max-md:w-16 max-md:h-16
-             rounded-full bg-orange-500 hover:bg-orange-600
-             text-3xl max-md:text-2xl
-             shadow-lg transition-transform duration-300 hover:scale-105">
-                ▶
-            </button>
-
-            <h2 class="mt-5 text-2xl max-md:text-xl font-semibold drop-shadow-md">
-                Virtual Campus Tour
-            </h2>
-        </div>
-    </section>
 
     <!-- Programs Section -->
     <section class="py-10 bg-gray-50">
@@ -241,186 +225,14 @@ require INCLUDES_PATH . '/header.php';
     </section>
 
     <!-- The Ranking Banner -->
-    <section class="bg-[#F9EBDB] py-0 md:py-6 px-0 md:px-8">
-        <div class="max-w-7xl mx-auto">
-
-            <!-- Desktop Image -->
-            <img src="https://geetauniversity.edu.in/uploads/all/1905/the.webp"
-                alt="Times Higher Education World University Rankings" width="1920" height="420" loading="lazy"
-                class="hidden md:block w-full h-auto rounded-lg" />
-
-            <!-- Mobile Image -->
-            <img src="https://geetauniversity.edu.in/uploads/all/1890/THE-Ranking.jpg"
-                alt="Times Higher Education World University Rankings" width="768" height="480" loading="lazy"
-                class="block md:hidden w-full h-auto rounded-lg" />
-
-        </div>
-    </section>
+    <?php require INCLUDES_PATH . '/the-ranking.php'; ?>
 
     <!-- LOP Section -->
-    <section class="py-10 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-6">
+    <?php require INCLUDES_PATH . '/lop-section.php'; ?>
 
-            <div class="mb-12 text-center">
-                <h2 class="text-3xl font-bold text-gray-900">
-                    Leadership Odyssey Program (LOP)
-                </h2>
-                <p class="mt-3 text-gray-600">
-                    Individual Development Program (IDP) – Customized Career Plan
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-
-                <div class="group bg-white border rounded-lg p-6 flex gap-5 hover:shadow-lg transition">
-                    <div class="flex flex-col items-center">
-                        <span class="text-sm font-semibold text-orange-600">PHASE</span>
-                        <span class="text-3xl font-bold text-orange-600">01</span>
-                        <span class="w-1 h-full bg-orange-500 mt-3 rounded"></span>
-                    </div>
-                    <div>
-                        <h3 class="text-lg font-semibold text-orange-600 mb-2">
-                            Profiling
-                        </h3>
-                        <ul class="list-disc list-inside text-gray-600 space-y-1 text-sm">
-                            <li>Aptitude and reasoning tests</li>
-                            <li>Psychometrics & personality assessment</li>
-                            <li>ATS-optimized resume audit</li>
-                            <li>Interest mapping & SWOT analysis</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="group bg-white border rounded-lg p-6 flex gap-5 hover:shadow-lg transition">
-                    <div class="flex flex-col items-center">
-                        <span class="text-sm font-semibold text-blue-600">PHASE</span>
-                        <span class="text-3xl font-bold text-blue-600">02</span>
-                        <span class="w-1 h-full bg-blue-500 mt-3 rounded"></span>
-                    </div>
-                    <div>
-                        <h3 class="text-lg font-semibold text-blue-600 mb-2">
-                            Skill Blueprints
-                        </h3>
-                        <ul class="list-disc list-inside text-gray-600 space-y-1 text-sm">
-                            <li>Customized skill modules</li>
-                            <li>Industry certifications (AWS, Cisco, EC-Council)</li>
-                            <li>Quarterly progress tracking</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="group bg-white border rounded-lg p-6 flex gap-5 hover:shadow-lg transition">
-                    <div class="flex flex-col items-center">
-                        <span class="text-sm font-semibold text-amber-600">PHASE</span>
-                        <span class="text-3xl font-bold text-amber-600">03</span>
-                        <span class="w-1 h-full bg-amber-500 mt-3 rounded"></span>
-                    </div>
-                    <div>
-                        <h3 class="text-lg font-semibold text-amber-600 mb-2">
-                            SWOT Odyssey Framework (SOF)
-                        </h3>
-                        <ul class="list-disc list-inside text-gray-600 space-y-1 text-sm">
-                            <li>Strength alignment to roles</li>
-                            <li>Skill-gap bootcamps</li>
-                            <li>Market trend opportunity mapping</li>
-                            <li>Threat mitigation strategies</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="group bg-white border rounded-lg p-6 flex gap-5 hover:shadow-lg transition">
-                    <div class="flex flex-col items-center">
-                        <span class="text-sm font-semibold text-teal-600">PHASE</span>
-                        <span class="text-3xl font-bold text-teal-600">04</span>
-                        <span class="w-1 h-full bg-teal-500 mt-3 rounded"></span>
-                    </div>
-                    <div>
-                        <h3 class="text-lg font-semibold text-teal-600 mb-2">
-                            Career Acceleration (WTO)
-                        </h3>
-                        <ul class="list-disc list-inside text-gray-600 space-y-1 text-sm">
-                            <li>Workplace Thrive Quotient</li>
-                            <li>Role-specific preparation</li>
-                            <li>Company culture & performance analysis</li>
-                            <li>Final placement readiness mapping</li>
-                        </ul>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
 
     <!-- Legacy & Ecosystem section -->
-    <section class="max-w-7xl mx-auto py-10">
-        <header class="mb-12 text-center">
-            <h2 class="text-3xl font-bold text-gray-900 mb-6">
-                Legacy & Ecosystem
-            </h2>
-        </header>
-
-        <div class="grid grid-cols-1 md:grid-cols-12 gap-10 items-start">
-
-            <div class="md:col-span-7">
-                <p class="text-gray-700 text-lg leading-relaxed max-w-3xl mb-8">
-                    Founded in 1985, the <span class="font-semibold">Geeta Group of Institutions</span> has emerged as a
-                    major educational hub with institutions spanning school education to doctoral programs. SPBSB
-                    benefits
-                    from the integrated ecosystem of:
-                </p>
-
-                <div class="space-y-4">
-                    <div class="flex items-stretch group">
-                        <div
-                            class="bg-[#E85C2D] text-white p-5 flex-grow rounded-sm shadow-sm transition-transform duration-200 group-hover:-translate-y-1">
-                            <h3 class="text-xl font-bold mb-1">Geeta University</h3>
-                            <p class="text-orange-50 font-medium">
-                                AI-enabled multidisciplinary campus
-                            </p>
-                        </div>
-                        <div class="w-2 bg-[#E85C2D] ml-2 rounded-sm opacity-80"></div>
-                    </div>
-
-                    <div class="flex items-stretch group">
-                        <div
-                            class="bg-[#4D94FF] text-white p-5 flex-grow rounded-sm shadow-sm transition-transform duration-200 group-hover:-translate-y-1">
-                            <h3 class="text-xl font-bold mb-1">Geeta Finishing School (GFS)</h3>
-                            <p class="text-blue-50 font-medium">
-                                Communication & Corporate Readiness
-                            </p>
-                        </div>
-                        <div class="w-2 bg-[#4D94FF] ml-2 rounded-sm opacity-80"></div>
-                    </div>
-
-                    <div class="flex items-stretch group">
-                        <div
-                            class="bg-[#4DB6AC] text-white p-5 flex-grow rounded-sm shadow-sm transition-transform duration-200 group-hover:-translate-y-1">
-                            <h3 class="text-xl font-bold mb-1">Geeta Technical Hub (GTH)</h3>
-                            <p class="text-teal-50 font-medium">
-                                Advanced Technology, Certifications, and Industry Skills
-                            </p>
-                        </div>
-                        <div class="w-2 bg-[#4DB6AC] ml-2 rounded-sm opacity-80"></div>
-                    </div>
-                </div>
-
-                <div class="mt-8">
-                    <p class="text-gray-500 text-lg font-medium leading-snug max-w-md">
-                        Together, they form a holistic,<br>
-                        future-ready talent development ecosystem.
-                    </p>
-                </div>
-            </div>
-
-            <div class="md:col-span-5 hidden md:block">
-                <div class="relative rounded-lg overflow-hidden shadow-lg border border-gray-200">
-                    <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAweqaQW6o7WvsvOanh_RcSmtZy9uqgb83KTroVGs6ogkMQHz9GKHr4scSn-yN2YwiXRmC-E_4S0TvHSUlGP194dR1jODI_IdKICcYb9mDMOk8TL2NLzGNikG7OW_--Q05OTcCtV3jpA=w408-h409-k-no"
-                        alt="Geeta Group Ecosystem" class="w-full h-full object-cover aspect-[1/1]" loading="lazy" />
-                </div>
-            </div>
-
-        </div>
-    </section>
+    <?php require INCLUDES_PATH . '/legacy-eco.php'; ?>
 </main>
 
 <?php require INCLUDES_PATH . '/footer.php'; ?>
